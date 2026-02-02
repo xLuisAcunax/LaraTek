@@ -218,3 +218,46 @@ footer a {
     margin: 0 auto 30px;
   }
 }
+
+/* Estilos específicos para páginas legales/texto */
+.policy-wrapper {
+  padding-top: 120px; /* Espacio para que el menú no tape el título */
+  padding-bottom: 60px;
+  min-height: 100vh;
+}
+
+.text-container {
+  max-width: 800px; /* Para que el texto no sea eterno de leer a lo ancho */
+  margin: 0 auto;
+  padding: 40px;
+  background: var(--bg-card); /* Fondo gris oscuro de tarjeta */
+  border-radius: 20px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.text-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-container h3 {
+  color: var(--accent); /* Color naranja/rojo para subtítulos */
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.text-container p,
+.text-container li {
+  color: var(--text-muted); /* Gris claro para lectura cómoda */
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.text-container ul {
+  margin-left: 20px;
+}
