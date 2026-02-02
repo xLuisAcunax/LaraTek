@@ -20,6 +20,38 @@ body {
   background-color: var(--light-bg);
 }
 
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+.nav-links a {
+    margin: 0 1rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-bg);
+}
+
 /* Header & Nav */
 header {
   background-color: var(--white);
