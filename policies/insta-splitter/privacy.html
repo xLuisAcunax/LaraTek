@@ -6,8 +6,72 @@
     <title>Política de Privacidad - InstaSplitter</title>
 
     <link rel="stylesheet" href="../../style.css" />
-
     <link rel="icon" href="../../assets/icon.svg" type="image/svg+xml" />
+
+    <style>
+      body {
+        background-color: #0f172a; /* Asegura fondo oscuro */
+        margin: 0;
+      }
+
+      /* Contenedor principal que empuja todo hacia abajo */
+      .legal-wrapper {
+        padding-top: 120px; /* EMPUJA EL CONTENIDO PARA QUE EL MENÚ NO LO TAPE */
+        padding-bottom: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* La tarjeta que contiene el texto */
+      .legal-card {
+        background-color: #1e293b; /* Color gris azulado de tarjeta */
+        max-width: 800px; /* Limita el ancho para que sea fácil de leer */
+        width: 100%;
+        padding: 40px;
+        border-radius: 16px;
+        border: 1px solid #334155;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+      }
+
+      /* Títulos */
+      .legal-card h1 {
+        margin-bottom: 10px;
+        line-height: 1.2;
+        color: #ffffff;
+        font-size: 2rem;
+      }
+
+      .legal-card h3 {
+        color: #f97316; /* Naranja LaraTek */
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+      }
+
+      /* Texto general */
+      .legal-card p,
+      .legal-card li {
+        color: #cbd5e1; /* Gris claro muy legible */
+        line-height: 1.7;
+        margin-bottom: 15px;
+        font-size: 1rem;
+      }
+
+      .legal-card ul {
+        padding-left: 20px;
+        margin-bottom: 15px;
+      }
+
+      /* Arreglo para el enlace de contacto */
+      .contact-email {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -19,8 +83,8 @@
       </nav>
     </header>
 
-    <main class="policy-wrapper">
-      <div class="text-container">
+    <section class="legal-wrapper">
+      <div class="legal-card">
         <h1>Política de Privacidad de InstaSplitter</h1>
         <p><strong>Última actualización:</strong> Febrero 2026</p>
         <br />
@@ -138,7 +202,7 @@
           <strong>laratek.col@gmail.com</strong>
         </p>
       </div>
-    </main>
+    </section>
 
     <footer>
       <p>&copy; 2026 LaraTek. Todos los derechos reservados.</p>
