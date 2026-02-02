@@ -1,71 +1,48 @@
-/* style.css */
+/* style.css - LaraTek Modern Dark Theme */
 :root {
-  --primary-color: #2563eb; /* Azul Tech */
-  --secondary-color: #1e293b; /* Gris oscuro para fondos */
-  --text-color: #334155; /* Gris para texto */
-  --light-bg: #f8fafc; /* Fondo claro */
-  --white: #ffffff;
+  /* Paleta extraída de tu App */
+  --primary-gradient: linear-gradient(
+    135deg,
+    #ff512f 0%,
+    #dd2476 100%
+  ); /* Naranja a Rosa/Morado */
+  --bg-dark: #0f172a; /* Azul muy oscuro, casi negro */
+  --bg-card: #1e293b; /* Un poco más claro para tarjetas */
+  --text-main: #f8fafc; /* Blanco */
+  --text-muted: #94a3b8; /* Gris claro */
+  --accent: #ff512f;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
   line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--light-bg);
 }
 
+/* Navbar Transparente */
 header {
-    background-color: var(--primary-color);
-    padding: 1rem;
-}
-
-.nav-links a {
-    margin: 0 1rem;
-    color: var(--white);
-    text-decoration: none;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-.btn {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background-color: #1d4ed8;
-}
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--light-bg);
-}
-
-/* Header & Nav */
-header {
-  background-color: var(--white);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
+  padding: 20px 0;
 }
 
 nav {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 20px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,144 +50,170 @@ nav {
 
 .logo {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--secondary-color);
+  font-weight: 800;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Texto con degradado */
   text-decoration: none;
 }
 
 .nav-links a {
-  margin-left: 20px;
+  color: var(--text-main);
   text-decoration: none;
-  color: var(--text-color);
+  margin-left: 25px;
   font-weight: 500;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: var(--primary-color);
+  color: var(--accent);
 }
 
-/* Hero Section */
+/* Hero Section (La parte principal) */
 .hero {
-  background-color: var(--secondary-color);
-  color: var(--white);
-  padding: 120px 20px 80px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Apps Grid */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-  color: var(--secondary-color);
-}
-
-.app-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.app-card {
-  background: var(--white);
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-  text-align: center;
-}
-
-.app-card:hover {
-  transform: translateY(-5px);
-}
-
-.app-icon {
-  width: 80px;
-  height: 80px;
-  background-color: #e2e8f0; /* Placeholder gris si no hay imagen */
-  border-radius: 20px;
-  margin: 0 auto 20px;
+  min-height: 100vh; /* Ocupa toda la pantalla */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  padding: 100px 20px 50px;
+  background: radial-gradient(circle at top right, #3d1522 0%, transparent 40%);
 }
 
-.app-card h3 {
-  margin-bottom: 10px;
+.hero-container {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Texto izquierda, Imagen derecha */
+  gap: 60px;
+  align-items: center;
 }
 
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.app-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-card);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  border: 1px solid #334155;
+}
+
+.app-badge img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+/* Botones */
 .btn {
   display: inline-block;
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 10px 20px;
-  border-radius: 5px;
+  background: var(--primary-gradient);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
   text-decoration: none;
-  margin-top: 15px;
   font-weight: bold;
+  box-shadow: 0 10px 20px rgba(221, 36, 118, 0.3);
+  transition: transform 0.2s;
 }
 
 .btn:hover {
-  background-color: #1d4ed8;
+  transform: translateY(-3px);
 }
 
-/* Policy Page Specifics */
-.policy-content {
-  background: var(--white);
-  padding: 40px;
-  border-radius: 10px;
-  margin-top: 100px; /* Offset for fixed header */
-  margin-bottom: 60px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+/* Truco CSS: Marco de Teléfono */
+.phone-mockup {
+  position: relative;
+  border: 12px solid #000;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  max-width: 300px;
+  margin: 0 auto;
+  background: #000;
 }
 
-.policy-content h1 {
-  margin-bottom: 20px;
+.phone-mockup img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.policy-content h3 {
-  margin-top: 25px;
+
+/* Features Section */
+.features {
+  padding: 80px 20px;
+  background: var(--bg-card);
+}
+
+.features-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.feature-card {
+  background: var(--bg-dark);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #334155;
+}
+
+.feature-card h3 {
   margin-bottom: 10px;
-  color: var(--secondary-color);
+  color: var(--text-main);
 }
-.policy-content ul {
-  margin-left: 20px;
-  margin-bottom: 15px;
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
 /* Footer */
 footer {
-  background-color: var(--secondary-color);
-  color: var(--white);
   text-align: center;
   padding: 40px 20px;
-  margin-top: auto;
+  border-top: 1px solid #334155;
+  color: var(--text-muted);
 }
 
 footer a {
-  color: #94a3b8;
-  text-decoration: none;
-  font-size: 0.9rem;
+  color: var(--text-main);
+  text-decoration: underline;
 }
 
-footer a:hover {
-  color: var(--white);
-  text-decoration: underline;
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr; /* Una sola columna */
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    margin: 0 auto 30px;
+  }
 }

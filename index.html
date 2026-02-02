@@ -3,49 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LaraTek | Desarrollo de Apps Android</title>
+    <title>LaraTek | Apps Android Innovadoras</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/icon.png" type="image/png" />
   </head>
   <body>
     <header>
       <nav>
         <a href="index.html" class="logo">LaraTek</a>
         <div class="nav-links">
-          <a href="#apps">Apps</a>
-          <a href="mailto:tucorreo@ejemplo.com">Contacto</a>
+          <a href="#features">Características</a>
+          <a href="mailto:tucorreo@ejemplo.com">Soporte</a>
         </div>
       </nav>
     </header>
 
     <section class="hero">
-      <h1>Desarrollo Android Simple y Eficaz</h1>
-      <p>
-        Creamos herramientas útiles para mejorar tu productividad y creatividad
-        en dispositivos móviles.
-      </p>
-    </section>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="app-badge">
+            <img src="assets/icon.png" alt="InstaSplitter Icon" />
+            Nuevo Lanzamiento
+          </div>
 
-    <main class="container" id="apps">
-      <h2 class="section-title">Nuestras Aplicaciones</h2>
-
-      <div class="app-grid">
-        <div class="app-card">
-          <div class="app-icon">✂️</div>
-          <h3>InstaSplitter</h3>
+          <h1>
+            Domina tus Panorámicas con
+            <span class="highlight">InstaSplitter</span>
+          </h1>
           <p>
-            Divide tus fotos panorámicas en cuadrículas perfectas. Procesa tus
-            imágenes localmente sin perder calidad y compártelas al instante.
+            La herramienta definitiva para dividir tus fotos en cuadrículas
+            perfectas para Instagram. Sin pérdida de calidad. Sin internet. 100%
+            Privado.
           </p>
+
           <a href="#" class="btn">Próximamente en Google Play</a>
         </div>
+
+        <div class="hero-image">
+          <div class="phone-mockup">
+            <img
+              src="assets/screenshot-main.png"
+              alt="InstaSplitter Interfaz"
+            />
+          </div>
+        </div>
       </div>
-    </main>
+    </section>
+
+    <section class="features" id="features">
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>🔒 Privacidad Total</h3>
+          <p>
+            Tus fotos nunca salen de tu teléfono. Todo el procesamiento se
+            realiza localmente en tu dispositivo.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>⚡ Alta Calidad</h3>
+          <p>
+            Divide panorámicas o fotos de alta resolución manteniendo la nitidez
+            original para tus redes sociales.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>🎨 Grid Personalizable</h3>
+          <p>
+            Elige entre formatos cuadrados (1:1) o retrato (4:5) y ajusta las
+            filas y columnas a tu gusto.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <footer>
       <p>&copy; 2024 LaraTek. Todos los derechos reservados.</p>
       <br />
-      <a href="./policies/insta-splitter/privacy.html"
-        >Política de Privacidad</a
+      <a
+        href="./policies/insta-splitter/privacy.html"
+        style="font-size: 0.9rem; opacity: 0.8"
+        >Política de Privacidad de InstaSplitter</a
       >
     </footer>
   </body>
